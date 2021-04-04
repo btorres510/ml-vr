@@ -7,9 +7,9 @@ window.addEventListener('load', event => {
         if (data.hasOwnProperty(key)) {
             const value = data[key];
             var node = document.createElement("a-sphere");
-            node.setAttribute('position', { x: parseInt(key) / 350, y: value / 350, z: -1 },);
-            node.setAttribute('radius', '0.01');
-            node.setAttribute('color', '#EF2D5E');
+            node.setAttribute('position', { x: (parseInt(key) / 150) - 0.5, y: (value / 150) - 0.5, z: -1 },);
+            node.setAttribute('radius', '0.02');
+            node.setAttribute('color', 'red');
             ascene.appendChild(node);
         }
     }
