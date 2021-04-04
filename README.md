@@ -1,9 +1,9 @@
 ## Running the APP
 
-Run the flowing commands on terminal
+Run the following commands on terminal
 
 ``` 
-export FLASK = app.py
+export FLASK_APP = app.py
 ```
 
 ```
