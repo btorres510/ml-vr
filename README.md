@@ -1,6 +1,6 @@
 ## Running the APP
 
-Run the floowing commands on terminal
+Run the following commands on terminal
 
 ''' export FLASK = app.py '''
 
