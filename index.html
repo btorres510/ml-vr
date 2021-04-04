@@ -8,6 +8,7 @@
   <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
   <script src="https://unpkg.com/aframe-environment-component@1.2.0/dist/aframe-environment-component.min.js"></script>
   <link rel="stylesheet" type="text/css" href="css/ui.css" media="screen" />
+  <script src="./js/index.js"></script>
 </head>
 
 <body>
@@ -25,7 +26,7 @@
   <script src="js/button.js"></script>
 
   <a-scene environment="preset: starry;" start>
-
+    <a-entity id="camera" camera look-controls></a-entity>
     <!-- <a-assets>
       <img id="pink" src="https://img.gs/bbdkhfbzkk/stretch/http://i.imgur.com/1hyyIUi.jpg" crossorigin="anonymous" />
       <img src="https://img.gs/bbdkhfbzkk/stretch/https://i.imgur.com/25P1geh.png" id="grid" crossorigin="anonymous">
