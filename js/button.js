@@ -28,6 +28,8 @@ AFRAME.registerComponent('start', {
             // fade out uiDiv background
             uiDiv.style["background-color"] = "rgba(0, 0, 0, 0.0)";
             uiDiv.style["transition"] = "background-color 1000ms linear";
+
+            $.get("/getmethod/<javascript_data>");
         }
 
         // activate for desktop/touchscreen
