@@ -18,16 +18,22 @@ AFRAME.registerComponent('start', {
             // allow point events again
             uiDiv.style["pointer-events"] = "none";
 
-            // sounds can only be triggered after a mouse interaction
-            // let soundPlayer = document.querySelector("#ambientSound");
-            // soundPlayer.components.sound.playSound();
-
             // remove startButton
             buttonEnter.parentNode.remove(buttonEnter);
 
             // fade out uiDiv background
             uiDiv.style["background-color"] = "rgba(0, 0, 0, 0.0)";
             uiDiv.style["transition"] = "background-color 1000ms linear";
+
+            $.ajax({
+                type: "GET",
+                url: "/key_val",
+                success: function (data) {
+                    var myObj = data;
+                    console.log(myObj);
+                }
+            });
+
         }
 
         // activate for desktop/touchscreen
