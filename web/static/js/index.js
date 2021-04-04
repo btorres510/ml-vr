@@ -57,9 +57,9 @@ const displayData = (data) => {
         if (data.hasOwnProperty(key)) {
             const value = data[key];
             var node = document.createElement("a-sphere");
-            node.setAttribute('position', { x: (parseInt(key) / 150) - 0.5, y: (value / 150) - 0.5, z: -1 },);
-            node.setAttribute('radius', '0.02');
-            node.setAttribute('color', 'red');
+            node.setAttribute('position', { x: (parseInt(key) / 75) - 0.6, y: (value / 75) - 0.6, z: -1 },);
+            node.setAttribute('radius', '0.0275');
+            node.setAttribute('color', 'white');
             ascene.appendChild(node);
         }
     }
