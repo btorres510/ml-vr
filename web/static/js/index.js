@@ -40,6 +40,7 @@ AFRAME.registerComponent('start', {
                 success: function (data) {
                     var myObj = data;
                     console.log(myObj);
+                    displayLine(myObj);
                 }
             });
 
@@ -62,5 +63,25 @@ const displayData = (data) => {
             node.setAttribute('color', 'white');
             ascene.appendChild(node);
         }
+    }
+};
+
+const displayLine = (data) => {
+    const ascene = document.getElementById("camera");
+
+    const coef = parseFloat(data['coef']);
+    const intercept = parseFloat(data['intercept']);
+
+    console.log(coef);
+    console.log(intercept);
+    var i;
+    for(i=0;i<100;i++) {
+        const line = document.createElement("a-sphere");
+        line.object3D.position.set((i/75) -0.6 ,((i*coef)+intercept)/75 - 0.6,-1);
+
+       // line.setAttribute('position', {x:parseInt(i/75) -0.6 , y:parseInt(((i*coef)+intercept)/75) - 0.6, z:-1},);
+        line.setAttribute('radius', '0.0275');
+        line.setAttribute('color', 'red');
+        ascene.appendChild(line);
     }
 };
